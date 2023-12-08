@@ -99,16 +99,24 @@
 
     </main>
 
-    <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
-        <h1>TNews<span class="text-danger">.</span></h1>
-        <p>
-            Website build with
-            <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://instagram.com/aaardnnn">@aaardnnn</a>
-        </p>
-        <p class="mb-0">
-            <a href="#" class="btn btn-primary">Back to top</a>
-        </p>
-    </footer>
+    <div class="text-body-secondary bg-body-tertiary">
+        <div class="container">
+            <footer
+                class="py-5 d-flex flex-wrap text-center align-items-center justify-content-between">
+                <div class="col-md-4 text-start">
+                    <h1>TNews<span class="text-danger">.</span></h1>
+                </div>
+                <div class="col-md-4">
+                    Website build with
+                    <a href="https://getbootstrap.com/">Bootstrap</a> by <a
+                        href="https://instagram.com/aaardnnn">@aaardnnn</a>
+                </div>
+                <div class="col-md-4 text-end">
+                    <a href="#" class="btn btn-primary">Back to top</a>
+                </div>
+            </footer>
+        </div>
+    </div>
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
