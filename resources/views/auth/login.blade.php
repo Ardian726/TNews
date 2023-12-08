@@ -10,8 +10,8 @@
         </a>
         <p class="h4 mb-3 fw-normal">Please sign in</p>
 
-        <div class="form-floating">
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email"
+        <div class="form-floating mb-1">
+            <input id="email" type="text" class="form-control @error('email') is-invalid @enderror" name="email"
                 value="{{ old('email') }}" required autocomplete="email" autofocus>
             <label for="floatingInput">Email address</label>
 
@@ -22,7 +22,7 @@
             @enderror
         </div>
         <div class="form-floating">
-            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
+            <input id="password" type="text" class="form-control @error('password') is-invalid @enderror"
                 name="password" required autocomplete="current-password">
             <label for="floatingPassword">Password</label>
 
@@ -44,9 +44,11 @@
         </div>
         <button class="btn btn-primary w-100 py-2 mb-4" type="submit" fdprocessedid="mowjkq">Sign in</button>
         @if (Route::has('password.request'))
-            <a class="btn btn-link" href="{{ route('password.request') }}">
+            <a href="{{ route('password.request') }}">
                 {{ __('Forgot Your Password?') }}
             </a>
         @endif
+        <hr>
+        <p class="text-center">Don't have an account? <a href="{{ route('register') }}">Sign Up</a></p>
     </form>
 @endsection
