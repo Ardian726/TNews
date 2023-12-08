@@ -48,17 +48,9 @@
 
         <div class="nav-scroller py-1 mb-3 border-bottom">
             <nav class="nav nav-underline justify-content-between">
-                <a class="nav-item nav-link link-body-emphasis active" href="#">World</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Technology</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Design</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Culture</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Business</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Politics</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Opinion</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Science</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Health</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Style</a>
-                <a class="nav-item nav-link link-body-emphasis" href="#">Travel</a>
+                @foreach ($allKategori as $item)
+                    <a class="nav-item nav-link link-body-emphasis" href="#">{{ $item->nama_kategori }}</a>
+                @endforeach
             </nav>
         </div>
     </div>
@@ -106,19 +98,26 @@
                 @endforeach
             </div>
         </div>
-
     </main>
 
-    <footer class="py-5 text-center text-body-secondary bg-body-tertiary">
-        <h1>TNews<span class="text-danger">.</span></h1>
-        <p>
-            Website build with
-            <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://instagram.com/aaardnnn">@aaardnnn</a>
-        </p>
-        <p class="mb-0">
-            <a href="#" class="btn btn-primary">Back to top</a>
-        </p>
-    </footer>
+    <div class="text-body-secondary bg-body-tertiary">
+        <div class="container">
+            <footer
+                class="py-5 d-flex flex-wrap text-center align-items-center justify-content-between">
+                <div class="col-md-4 text-start">
+                    <h1>TNews<span class="text-danger">.</span></h1>
+                </div>
+                <div class="col-md-4">
+                    Website build with
+                    <a href="https://getbootstrap.com/">Bootstrap</a> by <a
+                        href="https://instagram.com/aaardnnn">@aaardnnn</a>
+                </div>
+                <div class="col-md-4 text-end">
+                    <a href="#" class="btn btn-primary">Back to top</a>
+                </div>
+            </footer>
+        </div>
+    </div>
 
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 
